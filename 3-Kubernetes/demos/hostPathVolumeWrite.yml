@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: math-pod
+spec:
+  containers:
+  - name: math-add
+    image: ubuntu
+    command: ["/bin/sh", "-c"]
+    args: ["expr 3 + 2 >> /opt/result.txt"]
+    volumeMounts:
+    - mountPath: /opt
+      name: data-volume
+  restartPolicy: Never
+  volumes:
+  - name: data-volume
+    hostPath:
+      path: /var/local/clc3
+      type: DirectoryOrCreate

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: demo
+        image: agrimmer/demo:formatted
+        ports:
+        - containerPort: 8888
+        env:
+          - name: "FORMAT"
+            valueFrom:
+              configMapKeyRef:
+                name: outputformat
+                key: format

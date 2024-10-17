@@ -15,6 +15,15 @@ In this exercise, you will write a Dockerfile and you will build an im
     </p>
     </details>
 
+* [Rancher Desktop](https://rancherdesktop.io/) installed: 
+    <details><summary>Click here for install instructions.</summary>
+    <p>
+
+    * Installer for macOS / Windows: https://rancherdesktop.io/
+
+    </p>
+    </details>
+
 * [Docker Hub](https://hub.docker.com/) Account created:
     <details><summary>Click here for sign-up instructions.</summary>
     <p>

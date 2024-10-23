@@ -15,5 +15,5 @@ This part of the course consists of five topic areas:
 --- 
 
 #### Maintainers
-- Johannes Bräuer (:octocat: johannes-b)
-- Andreas Grimmer (:octocat: agrimmer)
+- Johannes Bräuer ( :octocat: johannes-b)
+- Andreas Grimmer ( :octocat: agrimmer)

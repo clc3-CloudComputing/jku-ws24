@@ -1,6 +1,6 @@
 # Exercise 3.3: Creating and Querying Deployments and Pods
 
-In this exercise, you will specify a Deployment for your Pod using a Deployment manifest (`deployment.yaml`). This manifest will be applied to your Kubernetes cluster to create a Deployment resource, automatically creating a ReplicaSet and a Pod. This Pod is then running your container. Finally, you will delete the Pod managed by a Deployment/ReplicaSet to see that Kubernetes takes care of creating it again.
+In this exercise, you will specify a Deployment for your Pod using a Deployment manifest (`deployment.yaml`). This manifest will be applied to your Kubernetes cluster to create a Deployment resource, automatically creating a ReplicaSet and a Pod. This Pod is then running your container. Finally, you will delete the Pod managed by a Deployment/ReplicaSet to see that Kubernetes creates it again.
 
 ## Instructions
 

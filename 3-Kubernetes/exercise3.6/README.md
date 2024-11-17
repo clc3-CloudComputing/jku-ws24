@@ -1,6 +1,6 @@
 # Exercise 3.6: Using Namespaces
 
-In this exercise, you will create a namespace for your Kubernetes resources (i.e., Deployments, Services, Pods). Afterward, you will modify the deployment manifest from exercise 3.2, to create a deployment in this particular namespace.
+In this exercise, you will create a Namespace for your Kubernetes resources (i.e., Deployments, Services, Pods). Afterward, you will modify the Deployment manifest from exercise 3.2, to create a Deployment in this particular Namespace.
 
 ## Instructions
 

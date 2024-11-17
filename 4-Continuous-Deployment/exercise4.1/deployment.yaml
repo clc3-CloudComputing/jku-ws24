@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: demo
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: demo
@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: demo
-        image: agrimmer/demo:time
+        image: agrimmer/demo:plain
         imagePullPolicy: Always
         ports:
         - containerPort: 8888

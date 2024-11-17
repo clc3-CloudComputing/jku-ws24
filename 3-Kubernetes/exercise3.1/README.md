@@ -1,7 +1,7 @@
 # Exercise 3.1: Setup of a Kubernetes Cluster
 
 In this exercise, you will create your own Kubernetes cluster hosted on a public cloud provider. For the following exercises, you can either use the [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/) or the [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
-In case you have no access to a public cloud (because e.g. you do not have a credit card, already used the free credits), you can also start a k8s cluster locally using [kind](https://kind.sigs.k8s.io/docs/user/quick-start/) or [minikube](https://minikube.sigs.k8s.io/docs/start/).
+In case you have no access to a public cloud (because you do not have a credit card, already used the free credits, etc.), you can also start a k8s cluster locally using [kind](https://kind.sigs.k8s.io/docs/user/quick-start/) or [minikube](https://minikube.sigs.k8s.io/docs/start/).
 
 
 ## Google Kubernetes Engine (GKE)
@@ -31,16 +31,16 @@ In case you have no access to a public cloud (because e.g. you do not have a cre
 
 1. Open the [Kubernetes Engine Overview](https://console.cloud.google.com/kubernetes)
 
-1. Click on *Create Cluster* and select "Standard: you manage your cluster"
+2. Click on *Create* and select "Standard: You manage your cluster"
 
-1. Create a cluster with the *default* settings except for the *Number of nodes* where you only need 1:
+3. Create a cluster with the *default* settings except for the *Number of nodes* where you only need 1:
 
     ![K8s Cluster in GKE](./assets/create_gke_cluster1.png)
     ![K8s Cluster in GKE](./assets/create_gke_cluster2.png)
 
-1. As soon as your cluster is ready, click on *Connect* and copy and paste this command into your terminal
+4. As soon as your cluster is ready, click on *Connect* and copy and paste this command into your terminal
 
-1. Now, your `kubectl` (i.e., the Kubernetes command-line tool) should be configured for your cluster. To verify this, execute the command: 
+5. Now, your `kubectl` (i.e., the Kubernetes command-line tool) should be configured for your cluster. To verify this, execute the command: 
 
     ```console
     kubectl get nodes
@@ -80,13 +80,16 @@ In case you have no access to a public cloud (because e.g. you do not have a cre
 
 1. As *Kubernetes cluster name* choose any name (e.g., `myname-cluster`)
 
-1. For the *Node size* select *DS2_v2* and for the *Node count* select 1:
+1. For both Node pools *agentpool* and *userpool*, select
+     * *Node size* = *D2s_v3*, 
+     * *Scale method* = *Manual*, and
+     * *Node count* = 1
 
     ![K8s Cluster in AKS](./assets/create_aks_cluster.png)
 
-1. Click *Review + create* and after the validation click *Create*
+2. Click *Review + create* and after the validation click *Create*
 
-1. As soon as your cluster is created, execute the following command in your terminal:
+3. As soon as your cluster is created, execute the following command in your terminal:
 
     ```console
     az aks get-credentials --resource-group YOUR-RESOURCE-GROUP --name MYNAME-CLUSTER
